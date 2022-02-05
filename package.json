@@ -10,16 +10,72 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:css-organizer.helloWorld"
+		"onCommand:css-organizer.alphabetically",
+		"onCommand:css-organizer.systematically"
+
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "css-organizer.helloWorld",
-				"title": "Hello World"
+		"commands": [{
+				"command": "css-organizer.alphabetically",
+				"title": "CSS Properties Alphabetically"
 			}
-		]
+			,
+			{
+				"command": "css-organizer.systematically",
+				"title": "CSS Properties Systematically"
+			}
+		],
+
+
+
+		"menus": {		
+			"editor/context": [
+			  {
+				"when": "resourceLangId == css ",
+				"submenu": "css-organizer.organize",
+				"group": "1_modification"
+			  }
+
+			],
+			"css-organizer.organize":[
+				{
+					"when": "resourceLangId == css ",
+					"command": "css-organizer.alphabetically"
+				  },
+				  {
+					"when": "resourceLangId == css ",
+					"command": "css-organizer.systematically"
+				  }
+			]
+		  },
+		  "submenus": [
+			{
+			  "id": "css-organizer.organize",
+			  "label": "Organize CSS"
+			}
+		  ],
+
+		"configuration": {
+			"title": "CSS Organizer",
+			"properties": {
+				"organizeOption": {
+					"type": "string",
+					"default": "default",
+					"enum": ["default", "user"],
+					"enumDescriptions": [
+						"Use the built-in default organize pattern",
+						"Use the user defined organize pattern"
+					],
+					"description": "How organization of CSS properties is done"
+				},
+				"systematic.addGroupingComments": {
+					"type": "boolean",
+					"default": false,
+					"description": "Insert comments indicating each group in the CSS"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -41,5 +97,8 @@
 		"mocha": "^9.1.3",
 		"typescript": "^4.5.4",
 		"@vscode/test-electron": "^2.0.3"
+	},
+	"dependencies": {
+		"css": "^3.0.0"
 	}
 }
