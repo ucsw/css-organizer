@@ -1,70 +1,61 @@
-# css-organizer README
+# Css-Organizer - Organize Your CSS Properties
 
-This is the README for your extension "css-organizer". After writing up a brief description, we recommend including the following sections.
+Css-organizer lets you organize your CSS properties file so that the properties under each rule can be sorted either 
+-   alphabetically or 
+-   systematically into groups.
 
-## Features
+You can select a single rule to sort or a selection of rules or all the rules. You setup your own way of grouping if you want.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+The sorting does not affect the order of the CSS rules in the files.
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+<br><br>
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![](images/css-organizer.gif)
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Use Cases
 
-## Extension Settings
+-   <b>UC 1 I want to sort the properties of this rule alphabetically</b>:<br>
+Place the cursor somewhere within the the rule and select `Context menu->Organize CSS->CSS Properties Alphabetically`<br> _or_ `ctrl+alt+c` and then `a` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Alphabetically`
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+-   **UC 2 I want to sort the properties of this rule into groups:**<br>
+Place the cursor somewhere within the the rule and `Context menu->Organize CSS->CSS Properties Grouped`<br> _or_ `ctrl+alt+c` and then `g` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Grouped`
 
-For example:
+-   **UC 3 I want to sort the properties of a _some rules_:**<br>
+Select the rules and then proceed as in UC1 or UC2. Every rule 'touched' by the selection will be included.
 
-This extension contributes the following settings:
+-   **UC 4 I want to sort the properties of _all rules_.</i> :**<br>
+Select everything, `ctrl-a`, then do as in UC1 or UC2.
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+-   **UC 5 When sorting in groups i want the group names to show, spaces between groups, nothing between groups :**<br>
+Go to the settings and set the display options
+
+-   **UC 6 I want to set up grouping in my own way :**<br>
+Edit the `user-grouping.json` file in the extension path/resources (or create your own file in the same directory) Go to settings select  `css-organizer.alternativeGroupingFileUse`, if you have created a new file, put its name in `css-organizer.alternativeGroupingFile`
+-   **UC 7 I regret what I just did :**<br>
+Just use `ctrl-z` and/or `ctrl-y` as you normally would.
+## css-organizer Settings
+
+*   `css-organizer.displayOption` Select if group names to show, spaces between groups, nothing between groups.
+*   `css-organizer.alternativeGroupingFile` Set the name of the file containing user defined CSS property grouping.
+*   `css-organizer.alternativeGroupingFileUse` Select if the user defined CSS property grouping shall be used.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+* Erroneous CSS or badly formatted CSS (several properties on the same line, badly placed braces etc.) can give unpredictable results. Tip: Beautify first.
+
+* Discontinuously selected rules does not work (yet).
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 1.0.0 First version.
 
-### 1.0.0
+## Acknowledgements
+The default sorting order for grouped CSS properties is very much inspired by the sorting order presented in the excellent [Kevin Powell video](https://www.youtube.com/watch?v=3Y03OSNw6zo&t=496s) discussing the benefits of organizing CSS properties.
+## Support the team
+If you find that using this tool saves you time and money, and you can afford it, consider supporting us. [Donate via Paypal](https://www.paypal.com/donate/?hosted_button_id=6P3N2A2THNDKJ)
+## Web Site
+Visit the UC Software website [ucsoftware.net](https://ucsoftware.net).
 
-Initial release of ...
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

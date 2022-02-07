@@ -1,14 +1,19 @@
 {
 	"name": "css-organizer",
-	"displayName": "css-organizer",
-	"description": "",
-	"version": "0.0.1",
+	"displayName": "Css Organizer",
+	"description": "Easy to use and flexible tool for organizing your CSS properties in groups or alphabetically",
+	"version": "1.0.0",
+	"publisher": "ucsoftware",
+	"license" : "MIT",
+	"homepage": "https://ucsoftware.net",
 	"engines": {
 		"vscode": "^1.63.0"
 	},
 	"categories": [
-		"Other"
+		"Linters"
 	],
+	"keywords":["css","linter","prettyprint", "organizer"],
+	"icon": "images/logo.png",
 	"activationEvents": [
 		"onCommand:css-organizer.alphabetically",
 		"onCommand:css-organizer.systematically"
@@ -19,60 +24,70 @@
 		"commands": [{
 				"command": "css-organizer.alphabetically",
 				"title": "CSS Properties Alphabetically"
-			}
-			,
+			},
 			{
-				"command": "css-organizer.systematically",
-				"title": "CSS Properties Systematically"
+				"command": "css-organizer.grouped",
+				"title": "CSS Properties Grouped"
 			}
 		],
 
 
 
-		"menus": {		
-			"editor/context": [
-			  {
-				"when": "resourceLangId == css ",
-				"submenu": "css-organizer.organize",
-				"group": "1_modification"
-			  }
+		"menus": {
+			"editor/context": [{
+					"when": "resourceLangId == css ",
+					"submenu": "css-organizer.organize",
+					"group": "1_modification"
+				}
 
 			],
-			"css-organizer.organize":[
-				{
+			"css-organizer.organize": [{
 					"when": "resourceLangId == css ",
 					"command": "css-organizer.alphabetically"
-				  },
-				  {
+				},
+				{
 					"when": "resourceLangId == css ",
-					"command": "css-organizer.systematically"
-				  }
+					"command": "css-organizer.grouped"
+				}
 			]
-		  },
-		  "submenus": [
+		},
+		"submenus": [{
+			"id": "css-organizer.organize",
+			"label": "Organize CSS"
+		}],
+		"keybindings": [{
+				"command": "css-organizer.alphabetically",
+				"key": "ctrl+alt+c a",
+				"mac": "cmd++alt+c a",
+				"when": "editorTextFocus"
+			},
 			{
-			  "id": "css-organizer.organize",
-			  "label": "Organize CSS"
+				"command": "css-organizer.grouped",
+				"key": "ctrl+alt+c s",
+				"mac": "cmd++alt+c s",
+				"when": "editorTextFocus"
 			}
-		  ],
+		],
 
 		"configuration": {
 			"title": "CSS Organizer",
 			"properties": {
-				"organizeOption": {
+				"css-organizer.userGroupingFile": {
 					"type": "string",
-					"default": "default",
-					"enum": ["default", "user"],
-					"enumDescriptions": [
-						"Use the built-in default organize pattern",
-						"Use the user defined organize pattern"
-					],
-					"description": "How organization of CSS properties is done"
+					"default": "user-grouping.json",
+					"description": "File containing the specification for an alternative way to group CSS properties. Use this file to set up your own way of grouping."
 				},
-				"systematic.addGroupingComments": {
+				"css-organizer.userGroupingFileUse": {
 					"type": "boolean",
 					"default": false,
-					"description": "Insert comments indicating each group in the CSS"
+					"description": "Check if you want to use the alternative grouping instead of the built-in."
+				},
+
+				"css-organizer.displayOption": {
+					"type": "string",
+					"default": "GroupName",
+					"enum": ["Nothing", "EmptyLine", "GroupName"],
+					"description": "When properties are sorted into groups, separate the groups by nothing, an empty line or a comment with the name of the group"
 				}
 			}
 		}

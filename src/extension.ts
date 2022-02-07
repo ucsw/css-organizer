@@ -1,3 +1,4 @@
+// Copyright (c) 2022 Ulf Carlström
 import * as vscode from 'vscode';
 import { CssOrganizer } from "./css-organizer";
 
@@ -11,9 +12,12 @@ export function activate(context: vscode.ExtensionContext) {
 		cssOrganizer.organizeAlphabetically();
 	});
 
-	cssOrganizer.registerCmd('css-organizer.systematically', () => {
-		cssOrganizer.organizeSystematically();
+	cssOrganizer.registerCmd('css-organizer.grouped', () => {
+		cssOrganizer.organizeGrouped();
 	});
+
+	cssOrganizer.loadGroupSorters(context);
+
 }
 
 // this method is called when your extension is deactivated
