@@ -20,7 +20,7 @@ The sorting does not affect the order of the CSS rules in the files.
 ### UC 1 I want to sort the properties of a single rule alphabetically:
 Place the cursor somewhere within the the rule and select `Context menu->Organize CSS->CSS Properties Alphabetically`<br> _or_ `ctrl+alt+c` and then `a` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Alphabetically`
 <br><br>
-### UC 2 I want to sort the properties of this rule into groups:**<br>
+### UC 2 I want to sort the properties of this rule into groups:<br>
 Place the cursor somewhere within the the rule and `Context menu->Organize CSS->CSS Properties Grouped`<br> _or_ `ctrl+alt+c` and then `g` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Grouped`
 <br><br>
 ### UC 3 I want to sort the properties of a _several rules_:<br>
@@ -29,7 +29,7 @@ Select the rules and then proceed as in UC1 or UC2. Every rule 'touched' by the 
 ### UC 4 I want to sort the properties of _all rules_.</i> :<br>
 Select everything, `ctrl-a`, then do as in UC1 or UC2.
 <br><br>
-### UC 5 When sorting in groups i want the group names to show, spaces between groups, nothing between groups :<br>
+### UC 5 When sorting in groups I want the group names to show, spaces between groups, nothing between groups :<br>
 Go to the settings and set the display options
 <br><br>
 ### UC 6 I want to set up grouping in my own way :<br>
@@ -51,7 +51,7 @@ Just use `ctrl-z` and/or `ctrl-y` as you normally would.
 
 ## Release Notes
 
-### 1.0.0 First version.
+### 1.0.3 First version. With some minor errors fixed.
 
 ## Acknowledgements
 The default sorting order for grouped CSS properties is very much inspired by the sorting order presented in the excellent [Kevin Powell video](https://www.youtube.com/watch?v=3Y03OSNw6zo&t=496s) discussing the benefits of organizing CSS properties.
