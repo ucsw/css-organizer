@@ -11,7 +11,7 @@
 	"license" : "MIT",
 	"homepage": "https://ucsoftware.net",
 	"engines": {
-		"vscode": "^1.63.0"
+		"vscode": "1.63.0"
 	},
 	"categories": [
 		"Linters"
