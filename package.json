@@ -20,7 +20,7 @@
 	"icon": "images/logo.png",
 	"activationEvents": [
 		"onCommand:css-organizer.alphabetically",
-		"onCommand:css-organizer.systematically"
+		"onCommand:css-organizer.grouped"
 
 	],
 	"main": "./out/extension.js",
