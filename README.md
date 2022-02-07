@@ -11,7 +11,7 @@ The sorting does not affect the order of the CSS rules in the files.
 
 <br><br>
 
-![](./images/css-organizer.gif)
+![](https://raw.githubusercontent.com/ucsw/css-organizer/main/images/css-organizer.gif)
 
 
 ## Use Cases
