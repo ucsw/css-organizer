@@ -4,6 +4,10 @@
 	"description": "Easy to use and flexible tool for organizing your CSS properties in groups or alphabetically",
 	"version": "1.0.0",
 	"publisher": "ucsoftware",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ucsw/css-organizer.git"
+	  },
 	"license" : "MIT",
 	"homepage": "https://ucsoftware.net",
 	"engines": {
