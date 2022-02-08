@@ -2,7 +2,7 @@
 	"name": "css-organizer",
 	"displayName": "Css Organizer",
 	"description": "Easy to use and flexible tool for organizing your CSS properties in groups or alphabetically",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "ucsoftware",
 	"repository": {
 		"type": "git",
@@ -34,8 +34,6 @@
 				"title": "CSS Properties Grouped"
 			}
 		],
-
-
 
 		"menus": {
 			"editor/context": [{

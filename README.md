@@ -18,10 +18,10 @@ The sorting does not affect the order of the CSS rules in the files.
 <br>
 
 ### UC 1 I want to sort the properties of a single rule alphabetically:
-Place the cursor somewhere within the the rule and select `Context menu->Organize CSS->CSS Properties Alphabetically`<br> _or_ `ctrl+alt+c` and then `a` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Alphabetically`
+Place the cursor somewhere within the rule and select `Context menu->Organize CSS->CSS Properties Alphabetically`<br> _or_ `ctrl+alt+c` and then `a` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Alphabetically`
 <br><br>
 ### UC 2 I want to sort the properties of this rule into groups:<br>
-Place the cursor somewhere within the the rule and `Context menu->Organize CSS->CSS Properties Grouped`<br> _or_ `ctrl+alt+c` and then `g` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Grouped`
+Place the cursor somewhere within the rule and `Context menu->Organize CSS->CSS Properties Grouped`<br> _or_ `ctrl+alt+c` and then `g` <br>_or_ use the command palette `ctrl+shift+p` and then choose `CSS Properties Grouped`
 <br><br>
 ### UC 3 I want to sort the properties of a _several rules_:<br>
 Select the rules and then proceed as in UC1 or UC2. Every rule 'touched' by the selection will be included.
@@ -33,8 +33,13 @@ Select everything, `ctrl-a`, then do as in UC1 or UC2.
 Go to the settings and set the display options
 <br><br>
 ### UC 6 I want to set up grouping in my own way :<br>
-Edit the `user-grouping.json` file in the extension path/resources (or create your own file in the same directory) Go to settings select  `css-organizer.alternativeGroupingFileUse`, if you have created a new file, put its name in `css-organizer.alternativeGroupingFile`
-<br><br>
+Edit the `user-grouping.json` file in the extension path/resources (or create your own file in the same directory) Go to settings select  `css-organizer.alternativeGroupingFileUse`, if you have created a new file, put its name in `css-organizer.alternativeGroupingFile`<br>
+The files are found here:
+
+-   Windows %USERPROFILE%\.vscode\extensions\ucsoftware.css-organizer-<version number>\resources
+-   macOS ~/.vscode/extensions/ucsoftware.css-organizer-<version number>/resources
+-   Linux ~/.vscode/extensions/ucsoftware.css-organizer-<version number>/resources
+<br>
 ### UC 7 I regret what I just did :<br>
 Just use `ctrl-z` and/or `ctrl-y` as you normally would.
 ## css-organizer Settings
@@ -52,6 +57,7 @@ Just use `ctrl-z` and/or `ctrl-y` as you normally would.
 ## Release Notes
 
 ### 1.0.3 First version. With some minor errors fixed.
+### 1.0.4 Updated README.
 
 ## Acknowledgements
 The default sorting order for grouped CSS properties is very much inspired by the sorting order presented in the excellent [Kevin Powell video](https://www.youtube.com/watch?v=3Y03OSNw6zo&t=496s) discussing the benefits of organizing CSS properties.
